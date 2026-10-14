@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "ThinkDrag: Semantic Drag-Based Image Editing with Visual Reasoning"
+abstract: "ThinkDrag is a unified multimodal framework for drag-based image editing with visual reasoning. It interprets sparse drag handles as semantic object- and scene-level transformations, can optionally produce an explicit reasoning trace before image generation, and grounds each drag with Drag Endpoint Markers. The work also introduces a supervised dataset of semantic drag transformations with reasoning traces and DragBench++, a benchmark of challenging drag-based editing scenarios with reference edits."
+authors:
+  - family-names: Fortes
+    given-names: Armando
+    affiliation: "S-Lab, Nanyang Technological University"
+  - family-names: Wei
+    given-names: Tianyi
+    affiliation: "S-Lab, Nanyang Technological University"
+  - family-names: Trakantannarong
+    given-names: Chindanai
+    affiliation: "S-Lab, Nanyang Technological University"
+  - family-names: Zhou
+    given-names: Shangchen
+    affiliation: "S-Lab, Nanyang Technological University"
+  - family-names: Pan
+    given-names: Xingang
+    affiliation: "S-Lab, Nanyang Technological University"
+repository-code: "https://github.com/atfortes/ThinkDrag"
+url: "https://atfortes.github.io/projects/thinkdrag/"
+license-url: "https://github.com/atfortes/ThinkDrag/blob/main/LICENSE"
+keywords:
+  - drag-based image editing
+  - point-based image editing
+  - image editing
+  - visual reasoning
+  - unified multimodal model
+  - diffusion models
+  - DragBench++
+identifiers:
+  - type: other
+    value: "arXiv:2610.13316"
+    description: arXiv preprint
+preferred-citation:
+  type: article
+  title: "ThinkDrag: Semantic Drag-Based Image Editing with Visual Reasoning"
+  authors:
+    - family-names: Fortes
+      given-names: Armando
+    - family-names: Wei
+      given-names: Tianyi
+    - family-names: Trakantannarong
+      given-names: Chindanai
+    - family-names: Zhou
+      given-names: Shangchen
+    - family-names: Pan
+      given-names: Xingang
+  journal: "arXiv preprint arXiv:2610.13316"
+  year: 2026
+  url: "https://arxiv.org/abs/2610.13316"
