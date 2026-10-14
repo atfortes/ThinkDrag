@@ -15,9 +15,13 @@
 
 It can reason about the intended transformation before generating.
 
-![teaser](./assets/teaser.png)
+![ThinkDrag teaser: for an ambiguous drag on a taxi, a previous method distorts the car, while ThinkDrag reasons that the hood should open; a text prompt can instead redirect the edit to lift the taxi's front.](./assets/teaser.png)
 
 </div>
+
+## 📖 Overview
+
+**ThinkDrag** is a **drag-based image editing** method built on a **unified multimodal model**. Rather than treating drags as geometric displacements, it interprets them as **semantic transformations** and can optionally produce a **visual reasoning trace** before generating the edit. To support this, we construct a **training dataset of semantic drag transformations paired with reasoning traces**, and introduce **DragBench++**, a benchmark of challenging drag-based editing scenarios with reference edits.
 
 ## 📮 Update
 - [2026.10] This repo is created.
@@ -30,27 +34,27 @@ It can reason about the intended transformation before generating.
 
 ## 🖼️ Results
 
-**Semantic transformations.** Same input and drag handles across drag-based editing methods.
+**Semantic transformations.** Same input and drag handles across drag-based image editing methods.
 
-![comparison](./assets/comparison.jpg)
+![Qualitative comparison on DragBench and DragBench++: DragDiffusion, DragLoRA, GeoDrag and LightningDrag mostly shift or distort pixels, while ThinkDrag turns the dog's head, spreads the parrot's wings, raises the blinds and turns the hippo's head.](./assets/comparison.jpg)
 
 **Reasoning-guided edits.** ThinkDrag can first infer the intended edit from the handles, then use that reasoning trace to guide generation.
 
-![reasoning](./assets/reasoning.jpg)
+![Direct generation versus reasoning mode: ThinkDrag reasons that the drags should open the refrigerator door, make the painted waves taller and cross the man's arms, and the reasoning-mode outputs realize that intent.](./assets/reasoning.jpg)
 
 ## 🧩 Method
 
 **Dataset.** Synthetic image pairs are filtered, matched with semantic keypoints, and paired with reasoning chains.
 
-![data pipeline](./assets/data_pipe.png)
+![ThinkDrag dataset pipeline: synthesized image pairs are filtered for plausibility, matched with semantic keypoints to form drag instructions, and paired with reasoning traces.](./assets/data_pipe.png)
 
 **Model.** Drags are represented as structured text tokens and Drag Endpoint Markers in a unified multimodal model.
 
-![model](./assets/model.png)
+![ThinkDrag model overview: a unified multimodal model takes the image and drag instruction, predicts a reasoning trace by next-token prediction and the edited image by velocity prediction, guided by Drag Endpoint Markers.](./assets/model.png)
 
 ## 📑 Citation
 
-If you find our work useful, please cite the following paper:
+If you find our work useful, please consider giving this repo a ⭐ to support our work and citing the following paper:
 
 ```bibtex
 @article{fortes2026thinkdrag,
